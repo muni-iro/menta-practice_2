@@ -1,0 +1,634 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', fot-tsukuardgothic-std,sans-serif;
+  font-style: normal;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  background-color: #C4CCEB;
+  color: #101010;
+}
+
+.wrapp {
+  max-width: 1004px;
+  padding: 0 20px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #101010;
+  text-decoration: none;
+}
+
+.header {
+  padding: 24px 0 24px;
+}
+
+.header-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.header p {
+  font-size: 2rem;
+  margin-left: 14px;
+}
+
+.main-ttl {
+  margin-top: calc(0.625rem + ((1vw - 3.75px) * 17.0111));
+}
+
+.main-ttl h1 {
+  font-size: calc(2.4rem + ((1vw - 0.375rem) * 8.5851));
+}
+
+.main-ttl h1 span {
+  display: inline-block;
+  padding: calc(1.6rem + ((1vw - 0.375rem) * 5.4054));
+  margin-top: calc(0.9rem + ((1vw - 3.75px) * 2.7027));
+  background-color: #fff;
+}
+
+.main-ttl h1 span:first-of-type {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1004px) {
+  .main-ttl {
+    margin-top: 117px;
+  }
+  .main-ttl h1 {
+    font-size: 8rem;
+  }
+  .main-ttl h1 span {
+    padding: 5rem;
+    margin-top: 26px;
+  }
+}
+
+.main-ttl .arrow {
+  display: block;
+  text-align: center;
+  margin-top: 45px;
+  font-size: 6.5rem;
+}
+
+.diagnosis {
+  padding-top: 200px;
+}
+
+.diagnosis-ttl {
+  font-size: 50px;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.diagnosis-ttl:before {
+  content: '';
+  display: inline-block;
+  background-image: url(../image/icon_bill_pc.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  width: 67px;
+  height: 67px;
+  margin-right: 36px;
+}
+
+.diagnosis-ttl:after {
+  content: '';
+  display: inline-block;
+  background-image: url(../image/icon_bill_pc.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  width: 67px;
+  height: 67px;
+  margin-left: 36px;
+}
+
+.diagnosis .point-inner {
+  border: solid 15px #fff;
+  border-radius: 43px;
+  padding: 10% 13% 10% 18%;
+  margin-top: 130px;
+  text-align: center;
+}
+
+.diagnosis .point-inner span {
+  font-size: calc(5rem + ((1vw - 3.75px) * 7.9491));
+}
+
+.diagnosis .point-inner .point {
+  font-family: fot-tsukuardgothic-std,sans-serif;
+  margin-right: 20px;
+  font-size: calc(8rem + ((1vw - 3.75px) * 12.7186));
+}
+
+.diagnosis .point-inner .line {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 44px auto 0;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 5px, #707070 5px, #707070 6px);
+  max-width: 546px;
+  height: 18px;
+}
+
+.diagnosis .point-inner p {
+  margin-top: 52px;
+  font-size: 3rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.book-intro {
+  padding-top: 94px;
+  padding-bottom: 246px;
+  position: relative;
+}
+
+.book-intro_contents li {
+  font-size: 3rem;
+  list-style: none;
+}
+
+.book-intro_contents li:nth-of-type(1) {
+  margin-left: 18%;
+}
+
+.book-intro_contents li:nth-of-type(2) {
+  margin-top: 75px;
+}
+
+.book-intro_contents li:nth-of-type(3) {
+  position: absolute;
+  right: 2%;
+  margin-top: 20px;
+}
+
+.book-intro_contents li:nth-of-type(4) {
+  position: relative;
+  margin-left: 5%;
+  margin-top: 68px;
+}
+
+.book-intro_contents li:nth-of-type(4):before {
+  display: inline-block;
+  margin-right: 5%;
+  content: '';
+  background-image: url(../image/icon_yen.png);
+  width: 136px;
+  height: 136px;
+  background-size: cover;
+  vertical-align: middle;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.book-intro_contents li:nth-of-type(5) {
+  margin-top: 26px;
+  position: absolute;
+  right: 10%;
+}
+
+.book-intro_contents li:nth-of-type(6) {
+  position: relative;
+  margin-top: 141px;
+  margin-left: 12%;
+}
+
+.book-intro_contents li:nth-of-type(6):after {
+  position: absolute;
+  right: 23%;
+  top: -53px;
+  display: inline-block;
+  content: '';
+  background-image: url(../image/icon_yen.png);
+  width: 136px;
+  height: 136px;
+  background-size: cover;
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
+}
+
+.book-intro h2 {
+  margin-top: 173px;
+  font-size: calc(2.3rem + ((1vw - 3.75px) * 9.062));
+  text-align: center;
+}
+
+.book-intro h2:before, .book-intro h2:after {
+  position: relative;
+  top: .5em;
+  display: inline-block;
+  content: '';
+  width: .1625em;
+  height: 1.1875em;
+  border-radius: 11px;
+  background-color: #fff;
+}
+
+.book-intro h2:before {
+  -webkit-transform: rotate(-32deg);
+          transform: rotate(-32deg);
+  margin-right: .5em;
+}
+
+.book-intro h2:after {
+  -webkit-transform: rotate(32deg);
+          transform: rotate(32deg);
+  margin-left: .5em;
+}
+
+@media screen and (min-width: 1004px) {
+  .book-intro h2 {
+    font-size: 8rem;
+  }
+}
+
+.book-intro .book-description {
+  margin-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.book-intro .book-description_text {
+  max-width: 579px;
+  margin-left: 10px;
+  font-family: Montserrat, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+.book-intro .book-description_text p {
+  margin-top: 35px;
+}
+
+.book-intro .book-description_text p:first-of-type {
+  margin-top: 0;
+}
+
+.book-intro .book-description_text .amazon-link {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  margin-top: 65px;
+  padding: 31px 117px;
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 1;
+  border-radius: 51px;
+  background-color: #fff;
+  -webkit-box-shadow: #101010 10px 10px;
+          box-shadow: #101010 10px 10px;
+}
+
+.book-intro .book-description_text .amazon-link:active {
+  top: 10px;
+  left: calc(50% + 10px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.coments {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;
+  font-weight: bold;
+  padding: 81px 20px 189px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.coments .john {
+  max-width: 339px;
+}
+
+.coments .john h3 {
+  margin-top: 87px;
+  font-size: 3.2rem;
+}
+
+.coments .john p {
+  margin-top: 36px;
+  line-height: 1.6875;
+}
+
+.coments .john .twitter {
+  margin-top: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coments .john .twitter dt:after {
+  content: ':';
+  margin: 0 2px 0 2px;
+}
+
+.coments .john .blog {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coments .john .blog dt:after {
+  content: ':';
+  margin: 0 2px 0 2px;
+}
+
+.coments .joanna {
+  max-width: 339px;
+}
+
+.coments .joanna h3 {
+  margin-top: 87px;
+  font-size: 3.2rem;
+}
+
+.coments .joanna p {
+  margin-top: 36px;
+  line-height: 1.6875;
+}
+
+.coments .joanna .twitter {
+  margin-top: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coments .joanna .twitter dt:after {
+  content: ':';
+  margin: 0 2px 0 2px;
+}
+
+.coments .joanna .blog {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.coments .joanna .blog dt:after {
+  content: ':';
+  margin: 0 2px 0 2px;
+}
+
+.footer {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;
+  padding-top: 97px;
+  padding-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+.footer .director {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .director dt:after {
+  content: ":";
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.footer .markup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 62px;
+}
+
+.footer .markup dt:after {
+  content: ":";
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-ttl .arrow {
+    margin-top: 130px;
+  }
+  .diagnosis {
+    padding-top: 200px;
+  }
+  .diagnosis-ttl {
+    font-size: 1.9rem;
+  }
+  .diagnosis-ttl:before {
+    width: 33.45px;
+    height: 33.45px;
+    margin-right: 24px;
+  }
+  .diagnosis-ttl:after {
+    width: 33.45px;
+    height: 33.45px;
+    margin-left: 24px;
+  }
+  .diagnosis .point-inner {
+    border: solid 8px #fff;
+    padding: 52px 33px 68px 31px;
+    margin-top: 93px;
+  }
+  .diagnosis .point-inner .point {
+    margin-right: 20px;
+  }
+  .diagnosis .point-inner .line {
+    margin: 23px auto 0;
+  }
+  .diagnosis .point-inner p {
+    margin-top: 70px;
+    font-size: 1.8rem;
+  }
+  .book-intro {
+    padding-top: 111px;
+    padding-bottom: 112px;
+    position: static;
+  }
+  .book-intro_contents li {
+    font-size: 1.6rem;
+  }
+  .book-intro_contents li:nth-of-type(1) {
+    margin-left: 10px;
+  }
+  .book-intro_contents li:nth-of-type(2) {
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  .book-intro_contents li:nth-of-type(3) {
+    position: static;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  .book-intro_contents li:nth-of-type(4) {
+    position: static;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  .book-intro_contents li:nth-of-type(4):before {
+    display: none;
+  }
+  .book-intro_contents li:nth-of-type(5) {
+    margin-top: 30px;
+    margin-left: 10px;
+    position: static;
+  }
+  .book-intro_contents li:nth-of-type(6) {
+    position: static;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  .book-intro_contents li:nth-of-type(6):after {
+    display: none;
+  }
+  .book-intro h2 {
+    margin-top: 128px;
+  }
+  .book-intro .book-description {
+    margin-top: 66.5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .book-intro .book-description figure {
+    margin: 0 auto;
+  }
+  .book-intro .book-description_text {
+    margin-top: 70.5px;
+    max-width: 100%;
+    margin-left: 0;
+    font-size: 1.6rem;
+  }
+  .book-intro .book-description_text .amazon-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 95px;
+    padding: 21px 0;
+  }
+  .coments {
+    padding: 124px 20px 174px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .coments .john {
+    max-width: 339px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .coments .john h3 {
+    margin-top: 39px;
+    font-size: 3rem;
+  }
+  .coments .john p {
+    margin-top: 20px;
+  }
+  .coments .john .twitter {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  .coments .john .blog {
+    font-size: 1.5rem;
+    margin-top: 16px;
+  }
+  .coments .joanna {
+    margin-top: 140px;
+    max-width: 339px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .coments .joanna h3 {
+    margin-top: 39px;
+    font-size: 3rem;
+  }
+  .coments .joanna p {
+    margin-top: 20px;
+  }
+  .coments .joanna .twitter {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  .coments .joanna .blog {
+    font-size: 1.5rem;
+    margin-top: 16px;
+  }
+  .footer {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .footer .director {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .director dt:after {
+    content: ":";
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .footer .markup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0px;
+  }
+  .footer .markup dt:after {
+    content: ":";
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

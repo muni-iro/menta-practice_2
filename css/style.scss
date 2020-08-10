@@ -1,0 +1,569 @@
+$mainTextColor: #101010;
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', fot-tsukuardgothic-std,sans-serif;
+    font-style: normal;
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    background-color: #C4CCEB;
+    color: $mainTextColor;
+}
+
+.wrapp{
+    max-width: 1004px;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+
+a{
+    color: $mainTextColor;
+    text-decoration: none;
+}
+// ------------------------------------------------------------------
+
+.header{
+    padding: 24px 0 24px;
+
+    &-center{ 
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    p{
+        font-size: 2rem;
+        margin-left: 14px;
+    }
+}
+
+.main-ttl{
+    margin-top: calc(0.625rem + ((1vw - 3.75px) * 17.0111));
+    h1{
+        font-size: calc(2.4rem + ((1vw - 0.375rem) * 8.5851));
+        // 26px~80pxまで可変
+
+        span{
+            display: inline-block;
+            padding: calc(1.6rem + ((1vw - 0.375rem) * 5.4054)); 
+            // 16px~50pxまで可変
+            margin-top: calc(0.9rem + ((1vw - 3.75px) * 2.7027));
+            // 9px~26pxまで可変
+            background-color: #fff;
+            
+            &:first-of-type{
+            margin-top: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1004px){
+        // 大きくなり過ぎ防止
+        margin-top: 117px;
+        h1{
+            font-size: 8rem;
+            span{
+                padding: 5rem;
+                margin-top: 26px;
+            }
+        }
+    }
+
+    .arrow{
+        display: block;
+        text-align: center;
+        margin-top: 45px;
+        font-size: 6.5rem;
+    }
+}
+
+.diagnosis{
+    padding-top: 200px;
+    &-ttl{
+        font-size: 50px;
+        letter-spacing: 0.05em;
+        text-align: center;
+
+        @mixin diagnosis-icon($iconSize){
+            content: '';
+            display: inline-block;
+            background-image: url(../image/icon_bill_pc.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            vertical-align: middle;
+            width: $iconSize;
+            height: $iconSize;
+        }
+        &:before{
+            @include diagnosis-icon(67px);
+            margin-right: 36px;
+        }
+        &:after{
+            @include diagnosis-icon(67px);
+            margin-left: 36px;
+        }
+    }
+    .point-inner{
+        border: solid 15px #fff;
+        border-radius: 43px;
+        padding: 10% 13% 10% 18%;
+        margin-top: 130px;
+        text-align: center;
+        span{
+            // font-size: 10rem;
+            font-size: calc(5rem + ((1vw - 3.75px) * 7.9491));
+        }
+        .point{
+            font-family: fot-tsukuardgothic-std,sans-serif;
+            margin-right: 20px;
+            // font-size: 16rem;
+            font-size: calc(8rem + ((1vw - 3.75px) * 12.7186));
+        }
+
+        // .line{このやり方だと、車線の間が空きすぎる。もっと詰めて表示したいので×
+        //     display: block;
+        //     background-image: url(../image/線.png);
+        //     width: 546px;
+        //     height: 18px;
+        // }
+
+        .line{ 
+            // これも端っこの線が切れてしまうのでダメ?
+            // 線にムラがある様に見える。ディスプレイのせい？
+            display: block;
+            box-sizing: border-box;
+            margin: 44px auto 0;
+            background: repeating-linear-gradient(-45deg, transparent, transparent 5px, #707070 5px, #707070 6px);
+            max-width: 546px;
+            height: 18px;
+        }
+        
+        p{
+            margin-top: 52px;
+            font-size: 3rem;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        // .line{リキッドレイアウトに向いていない?
+        //     display: block;
+        //     background-image: url(../image/line-group.png);
+        //     width: 546px;
+        //     height: 18px;
+        // }
+    }
+}
+
+.book-intro{
+    padding-top: 94px;
+    padding-bottom: 246px;
+    position: relative;
+
+    &_contents{
+        li{ 
+        font-size: 3rem;
+        list-style: none;
+
+            &:nth-of-type(1){
+                margin-left: 18%;
+            }
+            &:nth-of-type(2){
+                // position: absolute;
+                // left: 178px;
+                margin-top: 75px;
+            }
+            &:nth-of-type(3){
+                position: absolute;
+                right: 2%;
+                margin-top: 20px;
+            }
+            &:nth-of-type(4){
+                position: relative;
+                margin-left: 5%;
+                margin-top: 68px;
+            }
+            &:nth-of-type(4):before{
+                display: inline-block;
+                margin-right: 5%;
+                content: '';
+                background-image: url(../image/icon_yen.png);
+                width: 136px;
+                height: 136px;
+                background-size: cover;
+                vertical-align: middle;
+                transform: rotate(-10deg);
+            }
+            &:nth-of-type(5){
+                margin-top: 26px;
+                position: absolute;
+                right: 10%;
+            }
+            &:nth-of-type(6){
+                position: relative;
+                margin-top: 141px;
+                margin-left: 12%;
+            }
+            &:nth-of-type(6):after{
+                position: absolute;
+                right: 23%;
+                top: -53px;
+                display: inline-block;
+                content: '';
+                background-image: url(../image/icon_yen.png);
+                width: 136px;
+                height: 136px;
+                background-size: cover;
+                transform: rotate(12deg);
+            }
+        }
+    }
+
+    h2{
+        margin-top: 173px;
+        font-size: calc(2.3rem + ((1vw - 3.75px) * 9.062));
+        text-align: center;
+
+        &:before, &:after{
+            position: relative;
+            top: .5em;
+            display: inline-block;
+            content: '';
+            width: .1625em;
+            // 上位のフォントサイズが80pxの時13pxになって欲しいので、13/80=0.1625
+            // フォントサイズは可変なので、サイズに応じてwidthも変化する。
+            height: 1.1875em;
+            border-radius: 11px;
+            background-color: #fff;
+        }
+        &:before{
+            transform: rotate(-32deg);
+            margin-right: .5em;
+            // 上位のフォントサイズが可変なので、フォントサイズ*0.5で変化する。
+        }
+        &:after{
+            transform: rotate(32deg);
+            margin-left: .5em;
+        }
+
+        @media screen and (min-width: 1004px){
+            font-size: 8rem;
+        }
+    }
+    .book-description{
+        margin-top: 120px;
+        display: flex;
+        justify-content: space-between;
+
+        &_text{
+            max-width: 579px;
+            margin-left: 10px;
+            font-family: Montserrat, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1.7;
+
+            p{
+                margin-top: 35px;
+                &:first-of-type{
+                    margin-top: 0;
+                }
+            }
+
+            .amazon-link{
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                display: inline-block;
+                margin-top: 65px;
+                padding: 31px 117px;
+                font-size: 4rem;
+                font-weight: normal;
+                line-height: 1;
+                border-radius: 51px;
+                background-color: #fff;
+                box-shadow: $mainTextColor 10px 10px;
+
+                &:active{
+                    top: 10px;
+                    left: calc(50% + 10px);
+                    box-shadow: none;
+                }
+            }
+        }
+        // &_img{ 画像にsrcsetを指定しない場合のCSS
+        //     max-width: 342px;
+        // }
+
+    }
+}
+
+.coments{
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;
+    font-weight: bold;
+    padding: 81px 20px 189px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    
+    // ========================mixin===========================
+    @mixin john-joanna{
+        h3{
+            margin-top: 87px;
+            font-size: 3.2rem;
+        }
+        p{
+            margin-top: 36px;
+            line-height: 1.6875;
+        }
+        .twitter{
+            margin-top: 41px;
+            display: flex;
+            dt:after{
+                content: ':';
+                margin: 0 2px 0 2px;
+            }
+        }
+        .blog{
+            margin-top: 16px;
+            display: flex;
+            dt:after{
+                content: ':';
+                margin: 0 2px 0 2px;
+            }
+        }
+    }
+    // ========================/mixin===========================
+
+    .john{
+        max-width: 339px;
+        @include john-joanna();
+    }
+    .joanna{
+        max-width: 339px;
+        @include john-joanna();
+    }
+}
+
+.footer{
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;
+    padding-top: 97px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+
+    @mixin footerSet{
+        display: flex;
+        dt:after{
+            content: ":";
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+    }
+
+    .director{
+        @include footerSet();
+    }
+    .markup{
+        @include footerSet();
+        margin-left: 62px;
+    }
+}
+
+
+// ----------------------------------------------------
+
+@media screen and (max-width: 768px){
+    
+    .main-ttl{
+        .arrow{
+            margin-top: 130px;
+        }
+    }
+    
+    .diagnosis{
+        padding-top: 200px;
+        &-ttl{
+            font-size: 1.9rem;
+
+            @mixin diagnosis-icon_sp($iconSize){
+                width: $iconSize;
+                height: $iconSize;
+            }
+            &:before{
+                @include diagnosis-icon_sp(33.45px);
+                margin-right: 24px;
+            }
+            &:after{
+                @include diagnosis-icon_sp(33.45px);
+                margin-left: 24px;
+            } 
+        }
+        .point-inner{
+            border: solid 8px #fff;
+            padding: 52px 33px 68px 31px;
+            margin-top: 93px;
+
+            .point{
+                margin-right: 20px;
+            }
+    
+            .line{ 
+                margin: 23px auto 0;
+            }
+            
+            p{
+                margin-top: 70px;
+                font-size: 1.8rem;
+            }
+    
+        }
+    }
+    
+    .book-intro{
+        padding-top: 111px;
+        padding-bottom: 112px;
+        position: static;
+    
+        &_contents{
+            li{ 
+            font-size: 1.6rem;
+    
+                &:nth-of-type(1){
+                    margin-left: 10px;
+                }
+                &:nth-of-type(2){
+                    margin-top: 30px;
+                    margin-left: 10px;
+
+                }
+                &:nth-of-type(3){
+                    position: static;
+                    margin-top: 30px;
+                    margin-left: 10px;
+
+                }
+                &:nth-of-type(4){
+                    position: static;
+                    margin-left: 10px;
+                    margin-top: 30px;
+                }
+                &:nth-of-type(4):before{
+                    display: none;
+                }
+                &:nth-of-type(5){
+                    margin-top: 30px;
+                    margin-left: 10px;
+                    position: static;
+                }
+                &:nth-of-type(6){
+                    position: static;
+                    margin-top: 30px;
+                    margin-left: 10px;
+                }
+                &:nth-of-type(6):after{
+                    display: none;
+                }
+            }
+        }
+    
+        h2{
+            margin-top: 128px;
+        }
+        
+        .book-description{
+            margin-top: 66.5px;
+            display: flex;
+            flex-direction: column;
+
+            figure{
+                margin: 0 auto;
+            }
+    
+            &_text{
+                margin-top: 70.5px;
+                max-width: 100%;
+                margin-left: 0;
+                font-size: 1.6rem;
+    
+                .amazon-link{
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 95px;
+                    padding: 21px 0;
+                }
+            }
+        }
+    }
+
+    .coments{
+        padding: 124px 20px 174px;
+        display: flex;
+        flex-direction: column;
+    
+     // ========================mixin===========================
+        @mixin john-joanna{
+            margin-right: auto;
+            margin-left: auto;
+            h3{
+                margin-top: 39px;
+                font-size: 3rem;
+            }
+            p{
+                margin-top: 20px;
+            }
+            .twitter{
+                font-size: 1.5rem;
+                margin-top: 20px;
+            }
+            .blog{
+                font-size: 1.5rem;
+                margin-top: 16px;
+            }
+        }
+    // ========================/mixin===========================
+
+        .john{
+            max-width: 339px;
+            @include john-joanna;
+        }
+        .joanna{
+            margin-top: 140px;
+            max-width: 339px;
+            @include john-joanna;
+        }
+    }
+
+    .footer{
+        padding-top: 35px;
+        padding-bottom: 35px;
+        display: flex;
+        justify-content: space-evenly;
+
+    
+        @mixin footerSet{
+            display: flex;
+            dt:after{
+                content: ":";
+                margin-left: 4px;
+                margin-right: 4px;
+            }
+        }
+    
+        .director{
+            @include footerSet();
+        }
+        .markup{
+            @include footerSet();
+            margin-left: 0px;
+        }
+    }
+
+}
